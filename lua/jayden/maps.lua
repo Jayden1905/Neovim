@@ -8,9 +8,10 @@ keymap.set("n", "-", "<C-x>")
 
 -- Delete a word backwards
 keymap.set("n", "dw", 'vb"_d')
-keymap.set("n", "<space>w", ":w<cr>")
-keymap.set("n", "<space>q", ":q<cr>")
+-- keymap.set("n", "<space>w", ":w<cr>")
+-- keymap.set("n", "<space>q", ":q<cr>")
 keymap.set("n", "<space>h", ":noh<cr>")
+keymap.set("n", "<space>c", ":bdelete<cr>")
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
