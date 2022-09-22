@@ -15,5 +15,5 @@ require("react-extract").setup({
 	local_extract_strategy = "BEFORE",
 })
 
-vim.keymap.set({ "v" }, "<space>re", require("react-extract").extract_to_new_file)
-vim.keymap.set({ "v" }, "<space>rc", require("react-extract").extract_to_current_file)
+vim.keymap.set({ "v" }, "rce", require("react-extract").extract_to_new_file)
+vim.keymap.set({ "v" }, "rcc", require("react-extract").extract_to_current_file)

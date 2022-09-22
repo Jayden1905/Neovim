@@ -96,6 +96,7 @@ telescope.setup({
 					["l"] = actions.select_default,
 					["N"] = fb_actions.create,
 					["h"] = fb_actions.goto_parent_dir,
+					["x"] = fb_actions.remove,
 					["/"] = function()
 						vim.cmd("startinsert")
 					end,
@@ -131,7 +132,7 @@ end)
 vim.keymap.set("n", ";e", function()
 	builtin.diagnostics()
 end)
-vim.keymap.set("n", "<space>e", function()
+vim.keymap.set("n", "sf", function()
 	telescope.extensions.file_browser.file_browser({
 		path = "%:p:h",
 		cwd = telescope_buffer_dir(),

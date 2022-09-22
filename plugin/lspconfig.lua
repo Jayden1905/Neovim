@@ -69,6 +69,14 @@ nvim_lsp.cssls.setup({
 	capabilities = capabilities,
 })
 
+nvim_lsp.emmet_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = {
+		"html",
+	},
+})
+
 nvim_lsp.pyright.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,

@@ -38,5 +38,9 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Stay in indent mode
---keymap("v", "<", "<gv", opts)
---keymap("v", ">", ">gv", opts)
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
+
+-- Save Sessions
+keymap.set("n", "<space>sc", ":mksession recent.vim<cr>")
+keymap.set("n", "<space>ss", ":mksession!recent.vim<cr>")

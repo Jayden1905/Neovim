@@ -2,15 +2,12 @@ local status, cmp = pcall(require, "cmp")
 if not status then
 	return
 end
+
 local lspkind = require("lspkind")
 
 local has_words_before = function()
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
 	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
-
-local feedkey = function(key, mode)
-	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
@@ -19,8 +16,8 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
-require("luasnip").filetype_extend("javascript", { "javascriptreact" })
-require("luasnip").filetype_extend("typescript", { "typescriptreact" })
+-- require("luasnip").filetype_extend("javascript", { "javascriptreact" })
+-- require("luasnip").filetype_extend("typescript", { "typescriptreact" })
 
 cmp.setup({
 	snippet = {
@@ -40,8 +37,8 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
+				-- elseif luasnip.expand_or_jumpable() then
+				-- 	luasnip.expand_or_jump()
 			elseif has_words_before() then
 				cmp.complete()
 			else
@@ -51,8 +48,8 @@ cmp.setup({
 		["<S-Tab>"] = cmp.mapping(function()
 			if cmp.visible() then
 				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
-				luasnip.jump(-1)
+				-- elseif luasnip.jumpable(-1) then
+				-- 	luasnip.jump(-1)
 			end
 		end, { "i", "s" }),
 	}),
@@ -69,7 +66,3 @@ vim.cmd([[
   set completeopt=menuone,noinsert,noselect
   highlight! default link CmpItemKind CmpItemMenuDefault
 ]])
-
--- " Use <Tab> and <S-Tab> to navigate through popup menu
--- inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
--- inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
