@@ -52,12 +52,7 @@ packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("dinhhuy258/git.nvim") -- For git blame & browse
 
-	use({
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	})
+	use("numToStr/Comment.nvim")
 	use("kylechui/nvim-surround")
 	use("phaazon/hop.nvim")
 	use("napmn/react-extract.nvim")
