@@ -42,5 +42,5 @@ keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
 -- Save Sessions
-keymap.set("n", "<space>sc", ":mksession recent.vim<cr>")
-keymap.set("n", "<space>ss", ":mksession!recent.vim<cr>")
+keymap.set("n", "<space>Sc", ":mksession recent.vim<cr>")
+keymap.set("n", "<space>Ss", ":mksession!recent.vim<cr>")
