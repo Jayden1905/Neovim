@@ -26,7 +26,6 @@ telescope.setup({
 			-- "%.jpg",
 			-- "%.jpeg",
 			-- "%.png",
-			"%.svg",
 			"%.otf",
 			"%.ttf",
 			"%.webp",
