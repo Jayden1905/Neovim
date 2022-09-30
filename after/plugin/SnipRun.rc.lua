@@ -60,5 +60,5 @@ require("sniprun").setup({
 	live_mode_toggle = "off", --# live mode toggle, see Usage - Running for more info
 })
 
-vim.keymap.set("v", "<space>s", ":'<,'>SnipRun<cr>")
+vim.keymap.set("v", "<space>sr", ":'<,'>SnipRun<cr>")
 vim.keymap.set("n", "<space>sc", ":SnipClose<cr>")

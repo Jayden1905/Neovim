@@ -25,7 +25,6 @@ vim.keymap.set({ "n", "v" }, "<space>a", "<Cmd>Lspsaga code_action<CR>", opts)
 -- vim.keymap.set("n", "gs", "<Cmd>Lspsaga signature_help<CR>", opts)
 vim.keymap.set("n", "<space>t", "<cmd>Lspsaga open_floaterm<CR>", opts)
 vim.keymap.set("t", "<C-c>", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], opts)
-vim.keymap.set("t", "<esc>", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], opts)
 
 -- Example:
 local function get_file_name(include_path)

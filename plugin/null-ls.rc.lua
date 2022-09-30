@@ -9,7 +9,7 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.fish,
-		formatting.prettierd,
+		formatting.prettier,
 		formatting.stylua,
 		formatting.black.with({ extra_args = { "--fast" } }),
 	},
