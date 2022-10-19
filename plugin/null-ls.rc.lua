@@ -9,9 +9,13 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.fish,
-		formatting.prettier,
+		formatting.prettier.with({
+			extra_filetypes = { "svelte" },
+		}),
 		formatting.stylua,
+		formatting.sql_formatter,
 		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.autopep8,
 	},
 	on_attach = function(client, bufnr)
 		if client.server_capabilities.documentFormattingProvider then

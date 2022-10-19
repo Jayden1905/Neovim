@@ -15,5 +15,6 @@ prettier.setup({
 		"scss",
 		"less",
 		"html",
+		"svelte",
 	},
 })

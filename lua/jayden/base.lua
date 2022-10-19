@@ -40,5 +40,10 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 	command = "set nopaste",
 })
 
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = ".py",
+	command = "filetype plugin indent on",
+})
+
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })

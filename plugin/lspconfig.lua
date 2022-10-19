@@ -77,7 +77,12 @@ nvim_lsp.emmet_ls.setup({
 	},
 })
 
-nvim_lsp.pyright.setup({
+nvim_lsp.jedi_language_server.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+nvim_lsp.sqls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
