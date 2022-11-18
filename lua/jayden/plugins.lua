@@ -48,6 +48,13 @@ packer.startup(function(use)
 	})
 	use("akinsho/nvim-bufferline.lua")
 	-- use 'github/copilot.vim'
+	use({
+		"nvim-tree/nvim-tree.lua",
+		requires = {
+			"nvim-tree/nvim-web-devicons", -- optional, for file icons
+		},
+		tag = "nightly", -- optional, updated every week. (see issue #1193)
+	})
 
 	use("lewis6991/gitsigns.nvim")
 	use("dinhhuy258/git.nvim") -- For git blame & browse
