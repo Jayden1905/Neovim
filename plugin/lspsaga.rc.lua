@@ -42,7 +42,8 @@ local function get_file_name(include_path)
 	for _, cur in ipairs(path_list) do
 		file_path = (cur == "." or cur == "~") and "" or file_path .. cur .. " " .. "%#LspSagaWinbarSep#>%*" .. " %*"
 	end
-	return file_path .. file_name
+	-- return file_path .. file_name
+	return file_name
 end
 
 local function config_winbar_or_statusline()

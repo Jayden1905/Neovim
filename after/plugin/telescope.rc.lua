@@ -114,7 +114,9 @@ vim.keymap.set("n", ";f", function()
 	})
 end)
 vim.keymap.set("n", ";b", function()
-	builtin.buffers()
+	builtin.buffers({
+		path = "%:t",
+	})
 end)
 vim.keymap.set("n", ";r", function()
 	builtin.live_grep()
