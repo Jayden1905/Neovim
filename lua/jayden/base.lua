@@ -30,6 +30,7 @@ vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
+vim.opt.guifont = "SauceCodePro Nerd Font:h19"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
@@ -45,6 +46,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = ".py",
 	command = "filetype plugin indent on",
 })
+
+vim.cmd([[
+let g:neovide_transparency = 0.0
+let g:transparency = 0.8
+let g:neovide_background_color = '#0f1117'.printf('%x', float2nr(255 * g:transparency))
+]])
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
