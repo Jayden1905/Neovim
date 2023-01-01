@@ -50,7 +50,7 @@ packer.startup(function(use)
 		end,
 	})
 	use("akinsho/nvim-bufferline.lua")
-	use("github/copilot.vim")
+	-- use("github/copilot.vim")
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {

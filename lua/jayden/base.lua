@@ -7,6 +7,7 @@ vim.opt.fileencoding = "utf-8"
 vim.wo.number = true
 
 vim.opt.title = true
+vim.opt.wrap = true
 vim.opt.modifiable = true
 vim.opt.relativenumber = true
 vim.opt.autoindent = true
@@ -51,6 +52,7 @@ vim.cmd([[
 let g:neovide_transparency = 0.0
 let g:transparency = 0.8
 let g:neovide_background_color = '#0f1117'.printf('%x', float2nr(255 * g:transparency))
+set wrap
 ]])
 
 -- Add asterisks in block comments

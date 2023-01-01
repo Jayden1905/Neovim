@@ -10,9 +10,11 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.fish,
 		formatting.prettier.with({
-			extra_filetypes = { "svelte" },
+			extra_args = { "--single-quote", "--jsx-single-quote" },
+			extra_filetypes = { "astro", ".astro" },
 		}),
 		formatting.stylua,
+		formatting.eslint_d,
 		formatting.sql_formatter,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.autopep8,
@@ -24,7 +26,7 @@ null_ls.setup({
 			group = augroup_format,
 			buffer = 0,
 			callback = function()
-				vim.lsp.buf.formatting_seq_sync()
+				vim.lsp.buf.format()
 			end,
 		})
 	end,

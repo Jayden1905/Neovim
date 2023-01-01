@@ -78,6 +78,16 @@ nvim_lsp.jedi_language_server.setup({
 	capabilities = capabilities,
 })
 
+nvim_lsp.astro.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+nvim_lsp.eslint.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 nvim_lsp.sqls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
