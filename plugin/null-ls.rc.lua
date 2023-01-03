@@ -10,14 +10,15 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.fish,
 		formatting.prettier.with({
-			extra_args = { "--single-quote", "--jsx-single-quote" },
-			extra_filetypes = { "astro", ".astro" },
+			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+			extra_filetypes = { "astro", "svelte" },
 		}),
 		formatting.stylua,
-		formatting.eslint_d,
+		-- formatting.eslint_d,
 		formatting.sql_formatter,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.autopep8,
+		formatting.google_java_format,
 	},
 
 	on_attach = function(client, bufnr)

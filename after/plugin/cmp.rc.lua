@@ -37,8 +37,8 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-				-- elseif luasnip.expand_or_jumpable() then
-				-- 	luasnip.expand_or_jump()
+			-- elseif luasnip.expand_or_jumpable() then
+			-- 	luasnip.expand_or_jump()
 			elseif has_words_before() then
 				cmp.complete()
 			else
@@ -59,6 +59,20 @@ cmp.setup({
 	}),
 	formatting = {
 		format = lspkind.cmp_format({ with_text = false, maxwidth = 50 }),
+	},
+	{
+		name = "nvim_lsp",
+		filter = function(entry, ctx)
+			local kind = require("cmp.types.lsp").CompletionItemKind[entry:get_kind()]
+			if kind == "Snippet" and ctx.prev_context.filetype == "java" then
+				return true
+			end
+
+			if kind == "Text" then
+				return true
+			end
+		end,
+		group_index = 2,
 	},
 })
 

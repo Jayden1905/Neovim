@@ -83,6 +83,11 @@ nvim_lsp.astro.setup({
 	capabilities = capabilities,
 })
 
+nvim_lsp.jdtls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 nvim_lsp.eslint.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
