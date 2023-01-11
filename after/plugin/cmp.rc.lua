@@ -16,8 +16,8 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
--- require("luasnip").filetype_extend("javascript", { "javascriptreact" })
--- require("luasnip").filetype_extend("typescript", { "typescriptreact" })
+require("luasnip").filetype_extend("javascript", { "javascriptreact" })
+require("luasnip").filetype_extend("typescript", { "typescriptreact" })
 
 cmp.setup({
 	snippet = {
@@ -54,11 +54,16 @@ cmp.setup({
 		end, { "i", "s" }),
 	}),
 	sources = cmp.config.sources({
+		{ name = "copilot" },
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
 	}),
 	formatting = {
-		format = lspkind.cmp_format({ with_text = false, maxwidth = 50 }),
+		format = lspkind.cmp_format({
+			mode = "symbol",
+			max_width = 50,
+			symbol_map = { Copilot = "" },
+		}),
 	},
 	{
 		name = "nvim_lsp",

@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["git.nvim"] = {
     loaded = true,
     path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/git.nvim",
