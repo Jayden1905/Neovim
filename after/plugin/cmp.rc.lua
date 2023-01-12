@@ -18,6 +18,7 @@ end
 require("luasnip/loaders/from_vscode").lazy_load()
 require("luasnip").filetype_extend("javascript", { "javascriptreact" })
 require("luasnip").filetype_extend("typescript", { "typescriptreact" })
+vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 
 cmp.setup({
 	snippet = {
@@ -54,9 +55,10 @@ cmp.setup({
 		end, { "i", "s" }),
 	}),
 	sources = cmp.config.sources({
-		{ name = "copilot" },
-		{ name = "nvim_lsp" },
-		{ name = "buffer" },
+		{ name = "copilot", group_index = 2 },
+		{ name = "nvim_lsp", group_index = 2 },
+		{ name = "luasnip", group_index = 2 },
+		{ name = "buffer", group_index = 2 },
 	}),
 	formatting = {
 		format = lspkind.cmp_format({

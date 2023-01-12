@@ -14,7 +14,7 @@ null_ls.setup({
 			extra_filetypes = { "astro", "svelte" },
 		}),
 		formatting.stylua,
-		formatting.eslint_d,
+		-- formatting.eslint_d,
 		formatting.sql_formatter,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.autopep8,
