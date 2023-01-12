@@ -7,6 +7,7 @@ end
 vim.cmd([[packadd packer.nvim]])
 
 packer.startup(function(use)
+	use("kdheepak/lazygit.nvim")
 	use("folke/tokyonight.nvim")
 	use("lunarvim/Onedarker.nvim")
 	use("navarasu/onedark.nvim")
