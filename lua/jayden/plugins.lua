@@ -7,6 +7,15 @@ end
 vim.cmd([[packadd packer.nvim]])
 
 packer.startup(function(use)
+	use({
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+		-- optionally, override the default options:
+		config = function()
+			require("tailwindcss-colorizer-cmp").setup({
+				color_square_width = 2,
+			})
+		end,
+	})
 	use("kdheepak/lazygit.nvim")
 	use("folke/tokyonight.nvim")
 	use("lunarvim/Onedarker.nvim")
