@@ -89,6 +89,16 @@ _G.packer_plugins = {
     path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/Onedarker.nvim",
     url = "https://github.com/lunarvim/Onedarker.nvim"
   },
+  ["alpha-nvim"] = {
+    loaded = true,
+    path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
+  ["auto-session"] = {
+    loaded = true,
+    path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/auto-session",
+    url = "https://github.com/rmagatti/auto-session"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -249,16 +259,15 @@ _G.packer_plugins = {
     path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/react-extract.nvim",
     url = "https://github.com/napmn/react-extract.nvim"
   },
+  ["session-lens"] = {
+    loaded = true,
+    path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/session-lens",
+    url = "https://github.com/rmagatti/session-lens"
+  },
   sniprun = {
     loaded = true,
     path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/sniprun",
     url = "https://github.com/michaelb/sniprun"
-  },
-  ["tailwindcss-colorizer-cmp.nvim"] = {
-    config = { "\27LJ\2\nc\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23color_square_width\3\2\nsetup\30tailwindcss-colorizer-cmp\frequire\0" },
-    loaded = true,
-    path = "/Users/kyawzayannaing/.local/share/nvim/site/pack/packer/start/tailwindcss-colorizer-cmp.nvim",
-    url = "https://github.com/roobert/tailwindcss-colorizer-cmp.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
@@ -283,10 +292,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: tailwindcss-colorizer-cmp.nvim
-time([[Config for tailwindcss-colorizer-cmp.nvim]], true)
-try_loadstring("\27LJ\2\nc\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23color_square_width\3\2\nsetup\30tailwindcss-colorizer-cmp\frequire\0", "config", "tailwindcss-colorizer-cmp.nvim")
-time([[Config for tailwindcss-colorizer-cmp.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

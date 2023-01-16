@@ -42,5 +42,7 @@ keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
 -- Save Sessions
-keymap.set("n", "<space>Sc", ":mksession recent.vim<cr>")
-keymap.set("n", "<space>Ss", ":mksession!recent.vim<cr>")
+keymap.set("n", "<space>ss", "<cmd>SaveSession<cr>")
+keymap.set("n", "<space>sd", "<cmd>DeleteSession<cr>")
+keymap.set("n", "<space>sf", "<cmd>Autosession search<cr>")
+keymap.set("n", "<space>sD", "<cmd>Autosession delete<cr>")
