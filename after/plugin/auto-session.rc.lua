@@ -42,3 +42,5 @@ session_lens.setup({
 })
 
 auto_session.setup(opts)
+
+require("telescope").load_extension("session-lens")

@@ -8,6 +8,7 @@ vim.cmd([[packadd packer.nvim]])
 
 packer.startup(function(use)
 	use("rmagatti/auto-session")
+	use("akinsho/toggleterm.nvim")
 	use("rmagatti/session-lens")
 	use("goolord/alpha-nvim")
 	use("kdheepak/lazygit.nvim")

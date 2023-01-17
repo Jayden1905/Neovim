@@ -46,3 +46,6 @@ keymap.set("n", "<space>ss", "<cmd>SaveSession<cr>")
 keymap.set("n", "<space>sd", "<cmd>DeleteSession<cr>")
 keymap.set("n", "<space>sf", "<cmd>Autosession search<cr>")
 keymap.set("n", "<space>sD", "<cmd>Autosession delete<cr>")
+
+-- ToggleTerm
+keymap.set("n", "<space>t", "<cmd>ToggleTerm<cr>")
