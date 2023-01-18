@@ -49,3 +49,9 @@ keymap.set("n", "<space>sD", "<cmd>Autosession delete<cr>")
 
 -- ToggleTerm
 keymap.set("n", "<space>t", "<cmd>ToggleTerm<cr>")
+
+-- Github Copilot
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+-- Lazy Git
+vim.keymap.set("n", "<space>gg", "<Cmd>LazyGit<CR>", {})
