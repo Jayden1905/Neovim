@@ -16,8 +16,6 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
-require("luasnip").filetype_extend("javascript", { "javascriptreact" })
-require("luasnip").filetype_extend("typescript", { "typescriptreact" })
 vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 
 cmp.setup({

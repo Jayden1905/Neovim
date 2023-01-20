@@ -93,7 +93,9 @@ nvim_lsp.eslint.setup({
 	capabilities = capabilities,
 })
 
-nvim_lsp.sqls.setup({
+capabilities.offsetEncoding = { "utf-16" }
+
+nvim_lsp.clangd.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })

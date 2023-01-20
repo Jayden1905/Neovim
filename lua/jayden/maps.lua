@@ -55,3 +55,5 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true,
 
 -- Lazy Git
 vim.keymap.set("n", "<space>gg", "<Cmd>LazyGit<CR>", {})
+
+vim.keymap.set("n", "<space>r", "<Cmd>!g++ -Wall % && ./a.out<CR>", {})
