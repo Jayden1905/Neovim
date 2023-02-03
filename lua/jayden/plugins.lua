@@ -13,7 +13,6 @@ packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("kdheepak/lazygit.nvim")
 	use("folke/tokyonight.nvim")
-	use("lunarvim/Onedarker.nvim")
 	use("navarasu/onedark.nvim")
 	use("wbthomason/packer.nvim")
 	use({
