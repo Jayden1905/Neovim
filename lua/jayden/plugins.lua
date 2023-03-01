@@ -7,6 +7,11 @@ end
 vim.cmd([[packadd packer.nvim]])
 
 packer.startup(function(use)
+	use({
+		"dsznajder/vscode-es7-javascript-react-snippets",
+		run = "yarn install --frozen-lockfile && yarn compile",
+	})
+	use({ "projekt0n/github-nvim-theme", tag = "v0.0.7" })
 	use("rmagatti/auto-session")
 	use("akinsho/toggleterm.nvim")
 	use("rmagatti/session-lens")
@@ -23,6 +28,7 @@ packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- Common utilities
 	use("ThePrimeagen/harpoon")
 	use("onsails/lspkind-nvim") -- vscode-like pictograms
+	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-buffer") -- nvim-cmp source for buffer words
 	use("hrsh7th/cmp-nvim-lsp") -- nvim-cmp source for neovim's built-in LSP
 	use("hrsh7th/nvim-cmp") -- Completion
@@ -33,7 +39,14 @@ packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 
 	use("glepnir/lspsaga.nvim") -- LSP UIs
-	use("L3MON4D3/LuaSnip")
+	use("rafamadriz/friendly-snippets")
+	use({
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		tag = "v<CurrentMajor>.*",
+		-- install jsregexp (optional!:).
+		run = "make install_jsregexp",
+	})
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
