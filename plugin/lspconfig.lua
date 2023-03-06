@@ -97,8 +97,8 @@ nvim_lsp.jedi_language_server.setup({
 })
 
 nvim_lsp.svelte.setup({
-	on_attach = on_attach,
 	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 nvim_lsp.astro.setup({
