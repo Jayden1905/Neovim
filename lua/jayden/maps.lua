@@ -57,3 +57,6 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true,
 vim.keymap.set("n", "<space>gg", "<Cmd>LazyGit<CR>", {})
 
 vim.keymap.set("n", "<space>r", "<Cmd>!g++ -Wall % && ./a.out<CR>", {})
+
+-- Tsserver Organize Imports
+vim.keymap.set("n", "<space>oi", "<Cmd>OrganizeImports<CR>", {})

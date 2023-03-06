@@ -41,6 +41,15 @@ nvim_lsp.flow.setup({
 	capabilities = capabilities,
 })
 
+local function organize_imports()
+	local params = {
+		command = "_typescript.organizeImports",
+		arguments = { vim.api.nvim_buf_get_name(0) },
+		title = "",
+	}
+	vim.lsp.buf.execute_command(params)
+end
+
 nvim_lsp.tsserver.setup({
 	on_attach = on_attach,
 	filetypes = {
@@ -51,7 +60,16 @@ nvim_lsp.tsserver.setup({
 		"javascriptreact",
 		"javascript.jsx",
 	},
-	cmd = { "typescript-language-server", "--stdio" },
+	cmd = {
+		"typescript-language-server",
+		"--stdio",
+	},
+	commands = {
+		OrganizeImports = {
+			organize_imports,
+			description = "Organize Imports",
+		},
+	},
 	capabilities = capabilities,
 })
 
@@ -74,6 +92,11 @@ nvim_lsp.emmet_ls.setup({
 })
 
 nvim_lsp.jedi_language_server.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+nvim_lsp.svelte.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
