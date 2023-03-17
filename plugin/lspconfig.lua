@@ -116,6 +116,11 @@ nvim_lsp.eslint.setup({
 	capabilities = capabilities,
 })
 
+nvim_lsp.vuels.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 capabilities.offsetEncoding = { "utf-16" }
 
 nvim_lsp.clangd.setup({
