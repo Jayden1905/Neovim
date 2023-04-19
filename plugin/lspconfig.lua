@@ -121,6 +121,11 @@ nvim_lsp.vuels.setup({
 	capabilities = capabilities,
 })
 
+nvim_lsp.prismals.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 capabilities.offsetEncoding = { "utf-16" }
 
 nvim_lsp.clangd.setup({
