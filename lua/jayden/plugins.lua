@@ -8,6 +8,18 @@ vim.cmd([[packadd packer.nvim]])
 
 packer.startup(function(use)
 	use({
+		"olivercederborg/poimandres.nvim",
+		config = function()
+			require("poimandres").setup({
+				-- leave this setup function empty for default config
+				-- or refer to the configuration section
+				-- for configuration options
+				disable_background = true, -- disable background
+			})
+		end,
+	})
+	use("p00f/nvim-ts-rainbow")
+	use({
 		"dsznajder/vscode-es7-javascript-react-snippets",
 		run = "yarn install --frozen-lockfile && yarn compile",
 	})
