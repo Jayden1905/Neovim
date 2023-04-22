@@ -11,10 +11,9 @@ packer.startup(function(use)
 		"olivercederborg/poimandres.nvim",
 		config = function()
 			require("poimandres").setup({
-				-- leave this setup function empty for default config
-				-- or refer to the configuration section
-				-- for configuration options
+				dim_nc_background = false, -- dim 'non-current' window backgrounds
 				disable_background = true, -- disable background
+				disable_float_background = false, -- disable background for floats
 			})
 		end,
 	})
