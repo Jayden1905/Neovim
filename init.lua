@@ -18,6 +18,7 @@ if is_win then
 end
 
 local colorscheme = "poimandres"
+-- local colorscheme = "nord"
 
 vim.g.onedarker_italic_keywords = false
 

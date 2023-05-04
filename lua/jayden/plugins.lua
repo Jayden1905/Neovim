@@ -17,6 +17,7 @@ packer.startup(function(use)
 			})
 		end,
 	})
+	use("arcticicestudio/nord-vim")
 	use("p00f/nvim-ts-rainbow")
 	use({
 		"dsznajder/vscode-es7-javascript-react-snippets",
