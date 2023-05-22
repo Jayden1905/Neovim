@@ -60,3 +60,6 @@ vim.keymap.set("n", "<space>r", "<Cmd>!g++ -Wall % && ./a.out<CR>", {})
 
 -- Tsserver Organize Imports
 vim.keymap.set("n", "<space>oi", "<Cmd>OrganizeImports<CR>", {})
+
+-- keymap.set("n", "j", "jzz")
+-- keymap.set("n", "k", "kzz")

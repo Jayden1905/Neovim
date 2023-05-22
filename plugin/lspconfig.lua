@@ -88,6 +88,10 @@ nvim_lsp.emmet_ls.setup({
 	capabilities = capabilities,
 	filetypes = {
 		"html",
+		"jsx",
+		"tsx",
+		"javascriptreact",
+		"typescriptreact",
 	},
 })
 

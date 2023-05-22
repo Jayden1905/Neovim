@@ -17,8 +17,8 @@ if is_win then
 	require("jayden.windows")
 end
 
-local colorscheme = "poimandres"
--- local colorscheme = "nord"
+-- local colorscheme = "poimandres"
+local colorscheme = "onedark"
 
 vim.g.onedarker_italic_keywords = false
 
