@@ -8,6 +8,7 @@ vim.cmd([[packadd packer.nvim]])
 
 packer.startup(function(use)
 	use("karb94/neoscroll.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({
 		"olivercederborg/poimandres.nvim",
 		config = function()
