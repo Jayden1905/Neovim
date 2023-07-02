@@ -5,7 +5,7 @@ end
 
 toggleterm.setup({
 	size = 20,
-	open_mapping = [[<m-0>]],
+	open_mapping = [[<A-0>]],
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,
@@ -28,7 +28,7 @@ toggleterm.setup({
 
 function _G.set_terminal_keymaps()
 	local opts = { noremap = true }
-	-- vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
+	-- vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)
 	-- vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)
 	vim.api.nvim_buf_set_keymap(0, "t", "<m-h>", [[<C-\><C-n><C-W>h]], opts)
 	vim.api.nvim_buf_set_keymap(0, "t", "<m-j>", [[<C-\><C-n><C-W>j]], opts)
@@ -184,13 +184,7 @@ local horizontal_term = Terminal:new({
 			"<cmd>3ToggleTerm size=10 direction=horizontal<cr>",
 			{ noremap = true, silent = true }
 		)
-		vim.api.nvim_buf_set_keymap(
-			term.bufnr,
-			"t",
-			"<m-3>",
-			"<cmd>3ToggleTerm size=10 direction=horizontal<cr>",
-			{ noremap = true, silent = true }
-		)
+		vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<m-3>", { noremap = true, silent = true })
 		vim.api.nvim_buf_set_keymap(
 			term.bufnr,
 			"i",
