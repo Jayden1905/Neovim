@@ -6,8 +6,8 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		-- theme = "solarized_dark",
-		theme = "github_dark",
+		theme = "solarized_dark",
+		-- theme = "github_dark",
 		section_separators = { left = "", right = "" },
 		component_separators = { left = "", right = "" },
 		disabled_filetypes = {},

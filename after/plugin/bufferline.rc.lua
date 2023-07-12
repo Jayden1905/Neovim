@@ -12,44 +12,24 @@ bufferline.setup({
 		show_close_icon = false,
 		color_icons = true,
 	},
-	-- highlights = {
-	-- 	separator = {
-	-- 		fg = "#073642",
-	-- 		bg = "#002b36",
-	-- 	},
-	-- 	separator_selected = {
-	-- 		fg = "#073642",
-	-- 	},
-	-- 	background = {
-	-- 		fg = "#657b83",
-	-- 		bg = "#002b36",
-	-- 	},
-	-- 	buffer_selected = {
-	-- 		fg = "#fdf6e3",
-	-- 		bold = true,
-	-- 	},
-	-- 	fill = {
-	-- 		bg = "#073642",
-	-- 	},
-	-- },
 	highlights = {
 		separator = {
-			fg = "#8c949a",
-			bg = "#282c34",
+			fg = "#073642",
+			bg = "#002b36",
 		},
 		separator_selected = {
-			fg = "#8c949a",
+			fg = "#073642",
 		},
-		-- background = {
-		-- 	fg = "#c8ccd4",
-		-- 	bg = "#24292f",
-		-- },
+		background = {
+			fg = "#657b83",
+			bg = "#002b36",
+		},
 		buffer_selected = {
-			fg = "#ffffff",
+			fg = "#fdf6e3",
 			bold = true,
 		},
 		fill = {
-			bg = "#24292f",
+			bg = "#073642",
 		},
 	},
 })
