@@ -10,10 +10,12 @@ require("nvim-treesitter.configs").setup({
 		"css",
 		"html",
 		"lua",
+		"javascript",
+		"typescript",
 	},
 	sync_install = false,
 	auto_install = true,
-	ignore_install = { "javascript" },
+	ignore_install = { "" },
 	highlight = {
 		enable = true,
 		use_languagetree = true,

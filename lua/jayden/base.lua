@@ -32,6 +32,7 @@ vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.guifont = "SauceCodePro Nerd Font:h19"
+vim.opt.foldmethod = "manual"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

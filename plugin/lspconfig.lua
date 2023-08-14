@@ -73,6 +73,13 @@ nvim_lsp.tsserver.setup({
 	capabilities = capabilities,
 })
 
+nvim_lsp.graphql.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "graphql", "typescriptreact", "javascriptreact" },
+	cmd = { "graphql-lsp", "server", "-m", "stream" },
+})
+
 nvim_lsp.html.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
