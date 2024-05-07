@@ -11,6 +11,16 @@ require("lspsaga").setup({
 		respect_root = false,
 		color_mode = false,
 	},
+	implementation = {
+		enable = true,
+		sign = true,
+		virtual_text = true,
+		priority = 100,
+	},
+	implementation_icon = {
+		text = " ",
+		text_align = "left",
+	},
 	ui = {
 		-- currently only round theme
 		theme = "round",

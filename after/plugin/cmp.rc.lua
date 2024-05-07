@@ -64,6 +64,7 @@ cmp.setup({
 		{ name = "buffer", group_index = 2 },
 	}),
 	formatting = {
+		fields = { "kind", "abbr" },
 		format = lspkind.cmp_format({
 			mode = "symbol",
 			max_width = 50,

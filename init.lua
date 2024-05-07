@@ -18,7 +18,7 @@ if is_win then
 end
 
 -- local colorscheme = "github_dark"
-local colorscheme = "neosolarized"
+local colorscheme = "onedark"
 
 vim.g.onedarker_italic_keywords = false
 

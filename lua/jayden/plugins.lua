@@ -7,6 +7,12 @@ end
 vim.cmd([[packadd packer.nvim]])
 
 packer.startup(function(use)
+	use({
+		"craftzdog/solarized-osaka.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	})
 	use("karb94/neoscroll.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({
@@ -82,14 +88,6 @@ packer.startup(function(use)
 	})
 	use("akinsho/nvim-bufferline.lua")
 	use("github/copilot.vim")
-	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = {
-			"nvim-tree/nvim-web-devicons", -- optional, for file icons
-		},
-		tag = "nightly", -- optional, updated every week. (see issue #1193)
-	})
-
 	use("lewis6991/gitsigns.nvim")
 	use("dinhhuy258/git.nvim") -- For git blame & browse
 
@@ -97,5 +95,4 @@ packer.startup(function(use)
 	use("kylechui/nvim-surround")
 	use("phaazon/hop.nvim")
 	use("napmn/react-extract.nvim")
-	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 end)

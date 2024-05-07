@@ -17,7 +17,7 @@ null_ls.setup({
 		-- formatting.eslint_d,
 		formatting.sql_formatter,
 		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.autopep8,
+		-- formatting.autopep8,
 		formatting.google_java_format,
 		formatting.clang_format.with({
 			filetypes = { "c", "cpp", "objc", "objcpp" },
