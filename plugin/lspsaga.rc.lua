@@ -14,23 +14,32 @@ require("lspsaga").setup({
 	implementation = {
 		enable = true,
 		sign = true,
-		virtual_text = true,
+		virtual_text = false,
 		priority = 100,
 	},
 	implementation_icon = {
 		text = " ",
 		text_align = "left",
 	},
+	code_action_prompt = {
+		enable = true,
+		sign = true,
+		sign_priority = 40,
+		virtual_text = true,
+	},
 	ui = {
+		enable = true,
+		sign = true,
+		virtual_text = false,
 		-- currently only round theme
 		theme = "round",
 		-- border type can be single,double,rounded,solid,shadow.
+		code_action = "",
 		border = "single",
 		winblend = 0,
 		expand = "",
 		collapse = "",
 		preview = " ",
-		code_action = "💡",
 		diagnostic = "🐞",
 		incoming = " ",
 		outgoing = " ",
