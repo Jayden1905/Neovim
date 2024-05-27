@@ -1,3 +1,5 @@
+require("nvim-ts-autotag").setup()
+
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"tsx",
@@ -20,9 +22,9 @@ require("nvim-treesitter.configs").setup({
 		enable = true,
 		use_languagetree = true,
 	},
-	autotag = {
-		enable = true,
-	},
+	-- autotag = {
+	-- 	enable = true,
+	-- },
 	rainbow = {
 		enable = false,
 		-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
