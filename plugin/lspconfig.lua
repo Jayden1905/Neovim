@@ -102,6 +102,12 @@ nvim_lsp.emmet_ls.setup({
 	},
 })
 
+nvim_lsp.solidity.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "solidity" },
+})
+
 nvim_lsp.jedi_language_server.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,

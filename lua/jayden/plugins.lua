@@ -13,6 +13,8 @@ packer.startup(function(use)
 		priority = 1000,
 		opts = {},
 	})
+	use("mfussenegger/nvim-jdtls")
+	use({ "dasupradyumna/midnight.nvim", lazy = false, priority = 1000 })
 	use("karb94/neoscroll.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({

@@ -23,6 +23,7 @@ null_ls.setup({
 			filetypes = { "c", "cpp", "objc", "objcpp" },
 		}),
 		formatting.prismaFmt,
+		formatting.swiftlint,
 	},
 	on_attach = function(client, bufnr)
 		vim.api.nvim_clear_autocmds({ buffer = 0, group = augroup_format })

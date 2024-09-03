@@ -17,7 +17,7 @@ if is_win then
 	require("jayden.windows")
 end
 
--- local colorscheme = "github_dark"
+-- local colorscheme = "midnight"
 local colorscheme = "onedark"
 
 vim.g.onedarker_italic_keywords = false
