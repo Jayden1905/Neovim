@@ -42,10 +42,10 @@ packer.startup(function(use)
 	use("folke/tokyonight.nvim")
 	use("navarasu/onedark.nvim")
 	use("wbthomason/packer.nvim")
-	use({
-		"svrana/neosolarized.nvim",
-		requires = { "tjdevries/colorbuddy.nvim" },
-	})
+	-- use({
+	-- 	"svrana/neosolarized.nvim",
+	-- 	requires = { "tjdevries/colorbuddy.nvim" },
+	-- })
 	use("nvim-lualine/lualine.nvim") -- Statusline
 	use("nvim-lua/plenary.nvim") -- Common utilities
 	use("ThePrimeagen/harpoon")

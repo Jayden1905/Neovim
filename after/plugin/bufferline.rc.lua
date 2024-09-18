@@ -6,11 +6,9 @@ end
 bufferline.setup({
 	options = {
 		mode = "buffers",
-		separator_style = "padded_slant",
-		always_show_bufferline = false,
-		show_buffer_close_icons = true,
+		-- separator_style = "padded_slant",
+		show_buffer_close_icons = false,
 		show_close_icon = false,
-		color_icons = true,
 	},
 })
 

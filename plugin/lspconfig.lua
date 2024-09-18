@@ -50,7 +50,7 @@ local function organize_imports()
 	vim.lsp.buf.execute_command(params)
 end
 
-nvim_lsp.tsserver.setup({
+nvim_lsp.ts_ls.setup({
 	on_attach = on_attach,
 	filetypes = {
 		"typescript",
@@ -65,10 +65,10 @@ nvim_lsp.tsserver.setup({
 		"--stdio",
 	},
 	commands = {
-		OrganizeImports = {
-			organize_imports,
-			description = "Organize Imports",
-		},
+		-- OrganizeImports = {
+		-- 	organize_imports,
+		-- 	description = "Organize Imports",
+		-- },
 	},
 	capabilities = capabilities,
 })
@@ -100,6 +100,21 @@ nvim_lsp.emmet_ls.setup({
 		"javascriptreact",
 		"typescriptreact",
 	},
+})
+
+nvim_lsp.sourcekit.setup({
+	capabilities = {
+		workspace = {
+			didChangeWatchedFiles = {
+				dynamicRegistration = true,
+			},
+		},
+	},
+})
+
+nvim_lsp.gopls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 nvim_lsp.solidity.setup({

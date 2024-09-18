@@ -14,6 +14,6 @@ lspconfig.setup({
 		"tailwindcss",
 		"html",
 		"cssls",
-		"tsserver",
+		"ts_ls",
 	},
 })

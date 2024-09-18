@@ -55,10 +55,19 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true,
 -- Lazy Git
 vim.keymap.set("n", "<space>gg", "<Cmd>LazyGit<CR>", {})
 
-vim.keymap.set("n", "<space>r", "<Cmd>!g++ -Wall % && ./a.out<CR>", {})
+-- vim.keymap.set("n", "<space>r", "<Cmd>!g++ -Wall % && ./a.out<CR>", {})
+vim.keymap.set("n", "<space>r", "<Cmd>! go run %<CR>", {})
 
 -- Tsserver Organize Imports
-vim.keymap.set("n", "<space>oi", "<Cmd>OrganizeImports<CR>", {})
+-- vim.keymap.set("n", "<space>oi", "<Cmd>OrganizeImports<CR>", {})
+local function organize_imports()
+	local params = {
+		command = "_typescript.organizeImports",
+		arguments = { vim.api.nvim_buf_get_name(0) },
+	}
+	vim.lsp.buf.execute_command(params)
+end
+vim.keymap.set("n", "<space>oi", organize_imports, { noremap = true, silent = true })
 
 -- keymap.set("n", "j", "jzz")
 -- keymap.set("n", "k", "kzz")
