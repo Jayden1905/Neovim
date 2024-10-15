@@ -2,6 +2,9 @@ local keymap = vim.keymap
 
 keymap.set("n", "x", '"_x')
 
+-- set space as leader key
+vim.g.mapleader = " "
+
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
@@ -53,7 +56,7 @@ keymap.set("n", "<space>sD", "<cmd>Autosession delete<cr>")
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -- Lazy Git
-vim.keymap.set("n", "<space>gg", "<Cmd>LazyGit<CR>", {})
+vim.keymap.set("n", "<leader>gg", "<Cmd>LazyGit<CR>", {})
 
 -- vim.keymap.set("n", "<space>r", "<Cmd>!g++ -Wall % && ./a.out<CR>", {})
 vim.keymap.set("n", "<space>r", "<Cmd>! go run %<CR>", {})

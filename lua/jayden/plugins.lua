@@ -13,6 +13,7 @@ packer.startup(function(use)
 		priority = 1000,
 		opts = {},
 	})
+	use({ "ellisonleao/gruvbox.nvim" })
 	use("mfussenegger/nvim-jdtls")
 	use({ "dasupradyumna/midnight.nvim", lazy = false, priority = 1000 })
 	use("karb94/neoscroll.nvim")
@@ -42,10 +43,6 @@ packer.startup(function(use)
 	use("folke/tokyonight.nvim")
 	use("navarasu/onedark.nvim")
 	use("wbthomason/packer.nvim")
-	-- use({
-	-- 	"svrana/neosolarized.nvim",
-	-- 	requires = { "tjdevries/colorbuddy.nvim" },
-	-- })
 	use("nvim-lualine/lualine.nvim") -- Statusline
 	use("nvim-lua/plenary.nvim") -- Common utilities
 	use("ThePrimeagen/harpoon")

@@ -50,6 +50,11 @@ local function organize_imports()
 	vim.lsp.buf.execute_command(params)
 end
 
+nvim_lsp.dockerls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 nvim_lsp.ts_ls.setup({
 	on_attach = on_attach,
 	filetypes = {
@@ -78,6 +83,11 @@ nvim_lsp.graphql.setup({
 	capabilities = capabilities,
 	filetypes = { "graphql", "typescriptreact", "javascriptreact" },
 	cmd = { "graphql-lsp", "server", "-m", "stream" },
+})
+
+nvim_lsp.sqls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 nvim_lsp.html.setup({

@@ -3,7 +3,8 @@ if not status then
 	return
 end
 
-local lspkind = require("lspkind")
+-- local lspkind = require("lspkind")
+local icons = require("jayden.icons")
 
 local has_words_before = function()
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -20,8 +21,6 @@ local luasnip = require("luasnip")
 require("luasnip/loaders/from_vscode").lazy_load()
 require("luasnip").filetype_extend("javascript", { "javascriptreact" })
 require("luasnip").filetype_extend("typescript", { "typescriptreact" })
-
-vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 
 cmp.setup({
 	snippet = {
@@ -63,13 +62,29 @@ cmp.setup({
 		{ name = "luasnip", group_index = 2 },
 		{ name = "buffer", group_index = 2 },
 	}),
+	-- formatting = {
+	-- 	fields = { "kind", "abbr", "menu" },
+	-- 	format = lspkind.cmp_format({
+	-- 		mode = "symbol",
+	-- 		max_width = 50,
+	-- 		symbol_map = { Copilot = "" },
+	-- 	}),
+	-- },
 	formatting = {
-		fields = { "kind", "abbr" },
-		format = lspkind.cmp_format({
-			mode = "symbol",
-			max_width = 50,
-			symbol_map = { Copilot = "" },
-		}),
+		format = function(entry, vim_item)
+			vim_item.kind = icons.kind[vim_item.kind] .. " " .. vim_item.kind
+			vim_item.menu = ({
+				nvim_lsp = "[LSP]",
+				luasnip = "[LuaSnip]",
+				buffer = "[Buffer]",
+				copilot = "[Copilot]",
+			})[entry.source.name]
+			if entry.source.name == "copilot" then
+				vim_item.kind = icons.git.Octoface
+				vim_item.kind_hl_group = "CmpItemKindCopilot"
+			end
+			return vim_item
+		end,
 	},
 	{
 		name = "nvim_lsp",
