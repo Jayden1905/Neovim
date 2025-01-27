@@ -33,7 +33,6 @@ telescope.setup({
 			".github/",
 			".gradle/",
 			".idea/",
-			".settings/",
 			".vscode/",
 			"__pycache__/",
 			"build/",

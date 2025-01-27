@@ -64,7 +64,7 @@ require("lspsaga").setup({
 })
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<space>o", "<cmd>Lspsaga outline<CR>")
+vim.keymap.set("n", "<leader>ol", "<cmd>Lspsaga outline<CR>")
 vim.keymap.set("n", "<C-j>", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 vim.keymap.set("n", "<C-k>", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 vim.keymap.set("n", "K", "<Cmd>Lspsaga hover_doc<CR>", opts)

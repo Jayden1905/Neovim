@@ -17,12 +17,5 @@ if is_win then
 	require("jayden.windows")
 end
 
--- local colorscheme = "solarized-osaka-night"
-local colorscheme = "gruvbox"
-
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-
-if not status_ok then
-	-- vim.notify("colorscheme " .. colorscheme .. " not found!")
-	return
-end
+-- setup must be called before loading
+vim.cmd.colorscheme("catppuccin-mocha")

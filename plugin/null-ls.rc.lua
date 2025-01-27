@@ -10,7 +10,7 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.fish,
 		formatting.prettier.with({
-			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+			-- extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
 			extra_filetypes = { "astro", "svelte" },
 		}),
 		formatting.stylua,
@@ -28,6 +28,7 @@ null_ls.setup({
 		}),
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.goimports_reviser,
+		null_ls.builtins.formatting.csharpier,
 		-- null_ls.builtins.formatting.swiftfmt,
 	},
 	on_attach = function(client, bufnr)

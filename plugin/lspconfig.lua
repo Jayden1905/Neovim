@@ -41,16 +41,12 @@ nvim_lsp.flow.setup({
 	capabilities = capabilities,
 })
 
-local function organize_imports()
-	local params = {
-		command = "_typescript.organizeImports",
-		arguments = { vim.api.nvim_buf_get_name(0) },
-		title = "",
-	}
-	vim.lsp.buf.execute_command(params)
-end
-
 nvim_lsp.dockerls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+nvim_lsp.csharp_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
@@ -99,6 +95,11 @@ nvim_lsp.cssls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
+
+-- nvim_lsp.angularls.setup({
+-- 	on_attach = on_attach,
+-- 	capabilities = capabilities,
+-- })
 
 nvim_lsp.emmet_ls.setup({
 	on_attach = on_attach,
